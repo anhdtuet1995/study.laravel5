@@ -26,5 +26,16 @@ class ArticlesController extends Controller
     	Articles::create($dulieu_tu_input);
     	return redirect('articles');
     }
+
+    public function edit($id){
+        $article = Articles::findOrFail($id);
+        return view('pages.edit', compact('article'));
+    }
+
+    public function update($id, CheckArticlesRequest $request){
+        $articles = Articles::findOrFail($id);
+        $articles->update($request->all());
+        return redirect('articles');
+    }
 }
 
