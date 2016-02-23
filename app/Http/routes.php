@@ -37,3 +37,5 @@ Route::get('/aboutme', 'PagesController@aboutme');
 Route::get('/articles', 'ArticlesController@index');
 
 Route::get('/articles/create', 'ArticlesController@create');
+
+Route::post('/articles', 'ArticlesController@store');
