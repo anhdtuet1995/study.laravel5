@@ -35,3 +35,8 @@ Route::get('/contact', 'PagesController@contact');
 Route::get('/aboutme', 'PagesController@aboutme');
 
 Route::resource('articles', 'ArticlesController');
+
+Route::controllers([
+	'auth' => 'Auth\AuthController',
+	'password' => 'Auth\PasswordController'
+]);
